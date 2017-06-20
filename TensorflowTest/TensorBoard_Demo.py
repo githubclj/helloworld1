@@ -118,7 +118,7 @@ with tf.Session() as sess:
         total_batch = int(mnist.train.num_examples/batch_size)
         # Loop over all batches
         for i in range(total_batch):
-        ss    batch_xs, batch_ys = mnist.train.next_batch(batch_size)
+            batch_xs, batch_ys = mnist.train.next_batch(batch_size)
             # Run optimization op (backprop), cost op (to get loss value)
             # and summary nodes
             _, c, summary = sess.run([apply_grads, loss, merged_summary_op],
